@@ -1,4 +1,4 @@
-# ymap-project
+# Yandex Map WebAPI Client
 
 ## Project setup
 ```

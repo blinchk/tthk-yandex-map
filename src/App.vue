@@ -1,28 +1,48 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__brand">
+          Yandex Map WebAPI
+        </div>
+      </nav>
+    </header>
+    <div id="content">
+      <map-view/>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import MapView from "./components/MapView";
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MapView,
   }
 }
 </script>
 
-<style>
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+.nav {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  background: #DBFF76;
+  &__brand {
+    color: #2D2D2D;
+    padding: 10px 0;
+  }
 }
 </style>
