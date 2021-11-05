@@ -18,16 +18,17 @@ export default {
   },
   mounted()
   {
+    // код загрузки карты
     ymaps.load('https://api-maps.yandex.ru/2.1/?lang=en_US&api_key=8adcc65f-719a-4ab5-b9a6-4e65736ffc96').then(maps => {
       const map = new maps.Map('map', {
         center: this.coords,
         zoom: 18
       });
+      // создание прямоугольника
       const rectangle = new maps.Rectangle(this.rectangleCoords, {}, {});
       map.geoObjects.add(rectangle);
     }).catch(error => console.log('Failed to load Yandex.Map, error: ' + error.message));
   }
-
 }
 </script>
 
